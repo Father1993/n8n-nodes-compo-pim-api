@@ -1,28 +1,50 @@
 {
-    "name": "n8n-compo-pim-api",
+    "name": "n8n-nodes-compo-pim-api",
     "version": "1.0.0",
-    "description": "n8n community node for Compo PIM API",
+    "description": "n8n community node for Compo PIM API integration",
+    "keywords": ["n8n", "n8n-node", "compo", "pim", "api", "catalog", "product"],
     "author": "Andrej",
     "license": "MIT",
-    "main": "dist/index.js",
-    "scripts": {
-        "build": "tsc"
+    "homepage": "https://github.com/your-username/n8n-compo-pim-api",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/your-username/n8n-compo-pim-api.git"
     },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "format": "prettier --write .",
+        "lint": "eslint . --ext .ts",
+        "prepublishOnly": "npm run build"
+    },
+    "files": [
+        "dist/**/*",
+        "credentials/**/*",
+        "nodes/**/*"
+    ],
     "dependencies": {
-        "axios": "^1.11.0",
+        "axios": "^1.11.0"
+    },
+    "peerDependencies": {
         "n8n-core": "*",
         "n8n-workflow": "*"
     },
     "devDependencies": {
-        "@types/node": "^24.3.0",
+        "@types/node": "^20.0.0",
+        "prettier": "^3.0.0",
         "typescript": "^5.9.2"
+    },
+    "engines": {
+        "node": ">=18.10.0"
     },
     "n8n": {
         "credentials": [
-            "CompoPimApi"
+            "dist/credentials/CompoPimApi.credentials.js"
         ],
         "nodes": [
-            "CompoPimApi"
+            "dist/nodes/CompoPimApi.node.js"
         ]
     }
 }
