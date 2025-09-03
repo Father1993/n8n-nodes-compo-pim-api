@@ -1,6 +1,6 @@
 {
     "name": "n8n-nodes-compo-pim-api",
-    "version": "1.0.2",
+    "version": "1.0.10",
     "description": "n8n community node for Compo PIM API integration",
     "keywords": ["n8n", "n8n-node", "compo", "pim", "api", "catalog", "product"],
     "author": "Andrej Spinej",
@@ -13,7 +13,8 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "tsc",
+        "build": "tsc && npm run copy:icon",
+        "copy:icon": "xcopy /y nodes\\compoPimApi.svg dist\\nodes\\",
         "dev": "tsc --watch",
         "format": "prettier --write .",
         "lint": "eslint . --ext .ts",
@@ -22,7 +23,8 @@
     "files": [
         "dist/**/*",
         "credentials/**/*",
-        "nodes/**/*"
+        "nodes/**/*.ts",
+        "nodes/*.svg"
     ],
     "dependencies": {
         "axios": "^1.11.0"
