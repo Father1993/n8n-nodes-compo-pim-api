@@ -18,7 +18,7 @@ export class CompoPimApi implements INodeType {
     description: INodeTypeDescription = {
         displayName: 'Compo PIM API',
         name: 'compoPimApi',
-        icon: 'file:compopim.svg',
+        icon: 'file:/nodes/compoPimApi.svg',
         group: ['transform'],
         version: 1,
         subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
