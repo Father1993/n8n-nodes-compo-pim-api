@@ -5,10 +5,10 @@
     "keywords": ["n8n", "n8n-node", "compo", "pim", "api", "catalog", "product"],
     "author": "Andrej",
     "license": "MIT",
-    "homepage": "https://github.com/your-username/n8n-compo-pim-api",
+    "homepage": "https://github.com/Father1993/n8n-nodes-compo-pim-api",
     "repository": {
         "type": "git",
-        "url": "https://github.com/your-username/n8n-compo-pim-api.git"
+        "url": "https://github.com/Father1993/n8n-nodes-compo-pim-api"
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
