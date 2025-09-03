@@ -1,0 +1,28 @@
+{
+    "name": "n8n-compo-pim-api",
+    "version": "1.0.0",
+    "description": "n8n community node for Compo PIM API",
+    "author": "Andrej",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "axios": "^1.11.0",
+        "n8n-core": "*",
+        "n8n-workflow": "*"
+    },
+    "devDependencies": {
+        "@types/node": "^24.3.0",
+        "typescript": "^5.9.2"
+    },
+    "n8n": {
+        "credentials": [
+            "CompoPimApi"
+        ],
+        "nodes": [
+            "CompoPimApi"
+        ]
+    }
+}
