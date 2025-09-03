@@ -1,93 +1,93 @@
-# Инструкция по публикации пакета
+# Package Publishing Guide
 
-## Подготовка к публикации
+## Preparation
 
-1. **Убедитесь, что у вас есть аккаунт на npm:**
+1. **Ensure you have an npm account:**
    ```bash
    npm login
    ```
 
-2. **Проверьте, что все файлы готовы:**
+2. **Check that all files are ready:**
    ```bash
    npm run build
    ```
 
-3. **Проверьте package.json:**
-   - Убедитесь, что поле `name` уникально
-   - Обновите `version` при необходимости
-   - Проверьте `homepage` и `repository` URLs
+3. **Verify package.json:**
+   - Ensure the `name` field is unique
+   - Update `version` if needed
+   - Check `homepage` and `repository` URLs
 
-## Публикация
+## Publishing
 
-1. **Первая публикация:**
+1. **First-time publishing:**
    ```bash
    npm publish
    ```
 
-2. **Обновление версии:**
+2. **Version updates:**
    ```bash
-   npm version patch  # для багфиксов
-   npm version minor  # для новых функций
-   npm version major  # для кардинальных изменений
+   npm version patch  # for bug fixes
+   npm version minor  # for new features
+   npm version major  # for breaking changes
    npm publish
    ```
 
-## Установка в n8n
+## Installing in n8n
 
-### Через npm (рекомендуется):
+### Via npm (recommended):
 ```bash
 npm install n8n-nodes-compo-pim-api
 ```
 
 ### Self-hosted n8n:
-1. Установите пакет в директорию с n8n:
+1. Install the package in your n8n directory:
    ```bash
    npm install n8n-nodes-compo-pim-api
    ```
 
-2. Перезапустите n8n:
+2. Restart n8n:
    ```bash
    n8n start
    ```
 
 ### n8n Cloud:
-- Пакет должен быть опубликован в npm registry
-- Обратитесь к документации n8n Cloud для установки community nodes
+- Package must be published to npm registry
+- Refer to n8n Cloud documentation for installing community nodes
 
-## Настройка учетных данных в n8n
+## Setting up Credentials in n8n
 
-1. Перейдите в **Settings > Credentials**
-2. Нажмите **Add credential**
-3. Выберите **Compo PIM API**
-4. Введите данные:
+1. Go to **Settings > Credentials**
+2. Click **Add credential**
+3. Select **Compo PIM API**
+4. Enter credentials:
    - **Login**: s.andrey
    - **Password**: KZh-4g2-YFx-Jgm
-5. Сохраните
+5. Save
 
-## Использование в workflow
+## Using in Workflows
 
-1. Добавьте узел **Compo PIM API** в ваш workflow
-2. Выберите созданные учетные данные
-3. Настройте нужный ресурс и операцию
-4. Выполните workflow
+1. Add the **Compo PIM API** node to your workflow
+2. Select the created credentials
+3. Configure desired resource and operation
+4. Execute the workflow
 
-## Проверка
+## Verification
 
-После установки пакет должен появиться в списке доступных узлов в n8n под именем "Compo PIM API".
+After installation, the package should appear in the list of available nodes in n8n as "Compo PIM API".
 
-## Обновление пакета
+## Package Updates
 
-Чтобы обновить уже опубликованный пакет:
+To update an already published package:
 
-1. Внесите изменения в код
-2. Обновите версию: `npm version patch|minor|major`
-3. Пересоберите: `npm run build`
-4. Опубликуйте: `npm publish`
+1. Make code changes
+2. Update version: `npm version patch|minor|major`
+3. Rebuild: `npm run build`
+4. Publish: `npm publish`
 
-## Отладка
+## Troubleshooting
 
-Если пакет не появляется в n8n:
-1. Проверьте правильность установки
-2. Перезапустите n8n
-3. Проверьте логи n8n на наличие ошибок
-4. Убедитесь, что структура файлов соответствует требованиям n8n
+If the package doesn't appear in n8n:
+1. Verify correct installation
+2. Restart n8n
+3. Check n8n logs for errors
+4. Ensure file structure meets n8n requirements
