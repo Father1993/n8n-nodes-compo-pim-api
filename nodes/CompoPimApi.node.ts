@@ -9,6 +9,7 @@ import {
 import axios from 'axios'
 
 interface CompoPimCredentials {
+    serverUrl: string;
     login: string;
     password: string;
 }
@@ -342,8 +343,14 @@ export class CompoPimApi implements INodeType {
 
         // Получаем учетные данные
         const credentials = await this.getCredentials('compoPimApi') as CompoPimCredentials
+        
+        // Формируем базовый URL
+        const baseServerUrl = credentials.serverUrl.replace(/\/$/, '') // убираем слэш в конце
+        const baseURL = `${baseServerUrl}/api/v1`
+        
+        // Получаем токен авторизации
         const tokenResponse = await axios.post(
-            'https://demodata.compo-soft.ru/api/v1/sign-in/',
+            `${baseURL}/sign-in/`,
             {
                 login: credentials.login,
                 password: credentials.password,
@@ -352,7 +359,6 @@ export class CompoPimApi implements INodeType {
         )
 
         const token = tokenResponse.data.data.access.token
-        const baseURL = 'https://demodata.compo-soft.ru/api/v1'
         const headers = { Authorization: `Bearer ${token}` }
 
         for (let i = 0; i < items.length; i++) {
