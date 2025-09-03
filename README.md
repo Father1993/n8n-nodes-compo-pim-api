@@ -1,95 +1,95 @@
 # n8n-nodes-compo-pim-api
 
-Пакет n8n для интеграции с Compo PIM API - система управления информацией о товарах.
+n8n package for integration with Compo PIM API - a Product Information Management system.
 
-## Установка
+## Installation
 
 ```bash
 npm install n8n-nodes-compo-pim-api
 ```
 
-## Настройка учетных данных
+## Credentials Setup
 
-1. В n8n перейдите в **Credentials**
-2. Нажмите **New** и выберите **Compo PIM API**
-3. Введите ваши данные:
-   - **Login**: ваш логин в системе Compo PIM
-   - **Password**: ваш пароль
+1. In n8n, go to **Credentials**
+2. Click **New** and select **Compo PIM API**
+3. Enter your credentials:
+   - **Login**: your Compo PIM system login
+   - **Password**: your password
 
-## Доступные ресурсы
+## Available Resources
 
-### Каталог (Catalog)
-- Получить все категории
-- Получить категорию по ID
-- Создать категорию
-- Обновить категорию
-- Удалить категорию
+### Catalog
+- Get all categories
+- Get category by ID
+- Create category
+- Update category
+- Delete category
 
-### Товар (Product)
-- Получить товар по ID
-- Создать товар
-- Обновить товар
-- Удалить товар
-- Получить список товаров (с прокруткой)
+### Product
+- Get product by ID
+- Create product
+- Update product
+- Delete product
+- Get product list (with scrolling)
 
-### Шаблон (Template)
-- Получить шаблон по ID
-- Создать шаблон
-- Обновить шаблон
-- Удалить шаблон
+### Template
+- Get template by ID
+- Create template
+- Update template
+- Delete template
 
-### Канал (Channel)
-- Получить все каналы
-- Получить канал по ID
-- Создать канал
-- Обновить канал
-- Удалить канал
+### Channel
+- Get all channels
+- Get channel by ID
+- Create channel
+- Update channel
+- Delete channel
 
-### Характеристика (Feature)
-- Получить все характеристики
-- Получить характеристику по ID
-- Создать характеристику
-- Обновить характеристику
-- Удалить характеристику
+### Feature
+- Get all features
+- Get feature by ID
+- Create feature
+- Update feature
+- Delete feature
 
-## Примеры использования
+## Usage Examples
 
-### Получение всех категорий каталога
-1. Выберите ресурс: **Каталог**
-2. Выберите операцию: **Получить все**
+### Getting All Catalog Categories
+1. Select resource: **Catalog**
+2. Select operation: **Get All**
 
-### Создание нового товара
-1. Выберите ресурс: **Товар**
-2. Выберите операцию: **Создать**
-3. В поле **Данные** укажите JSON с данными товара
+### Creating a New Product
+1. Select resource: **Product**
+2. Select operation: **Create**
+3. In the **Data** field, provide product JSON data
 
-### Получение товаров с фильтрацией
-1. Выберите ресурс: **Товар**
-2. Выберите операцию: **Получить список (прокрутка)**
-3. Укажите необходимые фильтры:
-   - ID каталога
-   - ID бренда
-   - Количество дней для фильтрации по дате изменения
+### Getting Products with Filtering
+1. Select resource: **Product**
+2. Select operation: **Get List (scroll)**
+3. Specify required filters:
+   - Catalog ID
+   - Brand ID
+   - Number of days for date change filtering
 
-## API Документация
+## API Documentation
 
-Полная документация API доступна в файле `API-COMPO-PIM.md` в корне проекта.
+Full API documentation is available in the `API-COMPO-PIM.md` file in the project root.
 
-## Базовый URL
+## Base URL
 
 ```
 https://demodata.compo-soft.ru/api/v1/
 ```
 
-## Аутентификация
+## Authentication
 
-Нода автоматически получает токен доступа при помощи метода `/sign-in/` и использует его для всех последующих запросов.
+The node automatically obtains an access token using the `/sign-in/` method and uses it for all subsequent requests.
 
-## Совместимость
+## Compatibility
 
-- n8n версии 0.174.0 и выше
-- Node.js 18.10.0 и выше
+- n8n version 0.174.0 and above
+- Node.js 18.10.0 and above
 
-## Лицензия
+## License
 
 MIT
