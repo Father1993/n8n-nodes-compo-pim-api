@@ -1,12 +1,31 @@
 # n8n-nodes-compo-pim-api
 
-n8n package for integration with Compo PIM API - a Product Information Management system.
+[![NPM version](https://img.shields.io/npm/v/n8n-nodes-compo-pim-api.svg)](https://www.npmjs.com/package/n8n-nodes-compo-pim-api)
+[![License](https://img.shields.io/npm/l/n8n-nodes-compo-pim-api.svg)](https://github.com/your-username/n8n-nodes-compo-pim-api/blob/master/LICENSE)
+
+Community node for n8n providing integration with Compo PIM API - a comprehensive Product Information Management system designed for efficient management of product catalogs, templates, and channels.
+
+[n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
+
+[Installation](#installation) • [Credentials](#credentials-setup) • [Resources & Operations](#available-resources) • [Usage](#usage-examples) • [Compatibility](#compatibility) • [Resources](#resources)
+
+## Features
+
+- Full API access to Compo PIM product information management system
+- Manage product catalogs, templates, channels, and features
+- Batch operations with comprehensive filtering capabilities
+- Automatic authentication and token management
+- Seamless integration with n8n workflows
 
 ## Installation
+
+Follow these instructions to install this node for [n8n](https://n8n.io/):
 
 ```bash
 npm install n8n-nodes-compo-pim-api
 ```
+
+After installation, the node will be available in your n8n instance under the "Compo PIM API" name.
 
 ## Credentials Setup
 
@@ -15,6 +34,7 @@ npm install n8n-nodes-compo-pim-api
 3. Enter your credentials:
    - **Login**: your Compo PIM system login
    - **Password**: your password
+4. Save credentials
 
 ## Available Resources
 
@@ -90,6 +110,11 @@ The node automatically obtains an access token using the `/sign-in/` method and 
 - n8n version 0.174.0 and above
 - Node.js 18.10.0 and above
 
+## Resources
+
+- **NPM Package**: [n8n-nodes-compo-pim-api](https://www.npmjs.com/package/n8n-nodes-compo-pim-api)
+- **Developer Information**: For those interested in contributing or publishing updates, refer to the PUBLISH.md file in the repository which contains guidelines for maintaining and publishing this package.
+
 ## License
 
-MIT
+[MIT](LICENSE)
